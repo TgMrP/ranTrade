@@ -1,5 +1,12 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base", "@nuxtjs", ":rebaseStalePrs"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    }
   ]
 }
