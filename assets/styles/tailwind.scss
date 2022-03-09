@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Ogen;
+    src: url('@/assets/fonts/Ogen.ttf');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: Ogen;
+    src: url('@/assets/fonts/OgenBold.ttf');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: Ogen;
+    src: url('@/assets/fonts/OgenBlack.ttf');
+    font-weight: 900;
+  }
+
+  * {
+    font-family: 'Ogen' !important;
+  }
+
+  .base-padding {
+    @apply pt-16;
+  }
+}
+
+@layer components {
+  .s-btn {
+    @apply py-3 px-6;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.08);
+    background: linear-gradient(
+      256deg,
+      rgba(255, 224, 150, 1) 0%,
+      rgba(255, 183, 0, 1) 100%
+    );
+
+    &:hover {
+      background: linear-gradient(
+        128deg,
+        rgba(255, 224, 150, 1) 0%,
+        rgba(255, 183, 0, 1) 100%
+      );
+    }
+  }
+}
