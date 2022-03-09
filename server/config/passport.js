@@ -32,17 +32,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await User.findOne({ _id: id }).populate({
-      path: 'likesCar',
-      populate: [
-        {
-          path: 'TypeCar',
-        },
-        {
-          path: 'GovData',
-        },
-      ],
-    });
+    const user = await User.findOne({ _id: id });
 
     if (user) {
       done(null, omit(user.toObject(), ['password']));
