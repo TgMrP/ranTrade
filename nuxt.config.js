@@ -15,5 +15,15 @@ export default {
   ],
   modules: ['@nuxtjs/axios', '@nuxtjs/auth-next'],
   ...modulesConfig,
-  build: {},
+  tailwindcss: {
+    cssPath: '~/assets/styles/tailwind.scss',
+    configPath: '~/tailwind.config.js',
+  },
+  eslint: { cache: false, },
+  serverMiddleware: [
+    { path: "/api", handler: "~/server/index.js" },
+  ],
+  build: {
+
+  },
 }

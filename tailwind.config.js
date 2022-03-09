@@ -12,16 +12,27 @@ module.exports = {
       fontFamily: {
         sans: ['Ogen'],
       },
+      backgroundImage: {
+        'orange-gradient': "linear-gradient(225deg, #ffb700, #ffe096)",
+        'orange-gradient-reverse': "linear-gradient(128deg, #ffb700, #ffe096)",
+        'silver-gradient': "linear-gradient(48deg, rgba(255, 255, 255, 0.74) 24%, rgba(213, 213, 213, 1))"
+      },
       colors: {
-        'trade-silver': '#f8f8f8',
-        'trade-gray-dark': '#707070',
-        'trade-gray-light': 'rgba(213,213,213, 0.4)',
-        'trade-gray-light2': 'rgba(112,112,112, 0.58)',
-        'trade-gray-light3': '#d5d5d5',
-        'trade-blue': '#101c24',
-        'trade-dark-blue': '#1a3142',
-        'trade-orange': '#ffb700',
-        'trade-orange-2': '#ffe096',
+        trade: {
+          orange: {
+            1: '#ff9d00',
+            2: '#ffb700',
+            3: '#ffe096'
+          },
+          silver: {
+            1: '#333',
+            2: '#707070',
+            3: '#f8f8f8'
+          },
+          blue: {
+            dark: '#1a3142',
+          }
+        }
       },
     },
   },
