@@ -10,9 +10,16 @@ const config = require('./config');
 const connect = require('./config/db');
 const passport = require('./config/passport');
 const router = require('./routes/index.routes');
+const { notFound, errorHandler } = require('./middlewares/basic');
 
 const app = express();
 
+// Basic 
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Security
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -21,11 +28,10 @@ app.use(helmet({
     },
   },
 }))
-app.use(morgan('dev'));
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
+
+// Auth
 app.use(
   session({
     name: 'tradeMobile',
@@ -54,6 +60,11 @@ app.use((req, res, next) => {
   next();
 })
 
+// Routes
 app.use(router)
+
+// Handle errors
+app.use(notFound);
+app.use(errorHandler);
 
 module.exports = app
