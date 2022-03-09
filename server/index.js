@@ -9,6 +9,7 @@ const { v4: uuidv4 } = require('uuid');
 const config = require('./config');
 const connect = require('./config/db');
 const passport = require('./config/passport');
+const router = require('./routes/index.routes');
 
 const app = express();
 
@@ -53,8 +54,6 @@ app.use((req, res, next) => {
   next();
 })
 
-app.all('/', (req, res) => {
-  res.json({ data: 'data' })
-})
+app.use(router)
 
 module.exports = app
