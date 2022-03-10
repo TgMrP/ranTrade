@@ -1,12 +1,30 @@
 <template>
-  <div>
-    <div @click="likesModal = true">
+  <div class="main">
+    <div class="button" @click="likesModal = true">
       <p>הרכבים שאהבתי</p>
       <IconsHeaderLikeEmpty class="ico" />
     </div>
     <div v-if="likesModal" class="overlay" />
     <transition name="slide">
-      <div v-if="likesModal" class="modal">test</div>
+      <div
+        v-if="likesModal"
+        v-click-outside="() => (likesModal = false)"
+        class="modal"
+      >
+        <div class="w-full flex justify-between items-center">
+          <div class="flex gap-2 items-center">
+            <IconsLikeHeartEmpty class="h-5" />
+            הרכבים שאהבתי
+          </div>
+          <IconsModalExit
+            class="h-3 cursor-pointer"
+            @click.native="likesModal = false"
+          />
+        </div>
+        <div class="pt-4 grid lg:grid-cols-2 gap-8">
+          <CarCard v-for="x in 4" :key="x" :mini="true" />
+        </div>
+      </div>
     </transition>
   </div>
 </template>
@@ -21,8 +39,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
-  div {
+.main {
+  .button {
     @apply flex items-center gap-2;
     p {
       @apply cursor-pointer hover:opacity-80;
@@ -38,7 +56,7 @@ div {
     @apply z-[9998];
   }
   .modal {
-    @apply fixed left-0 top-0 bg-white text-black w-[40vw] p-4 border;
+    @apply fixed left-0 top-0 bg-white text-black  p-4 border;
     @apply z-[9999];
   }
 }

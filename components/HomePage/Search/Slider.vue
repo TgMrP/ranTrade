@@ -12,15 +12,21 @@
           :cleanup-styles-on-destroy="true"
         >
           <swiper-slide v-for="(x, i) in data" :key="i">
-            <div :class="cardStyle">
-              <template v-if="cardStyle === 'image'">
+            <div :class="x.type">
+              <template v-if="x.type === 'image'">
                 <img v-if="x.image" :src="x.image" :alt="x.name" class="" />
                 <span> {{ x.name }}</span>
               </template>
-              <template v-else>
+              <template v-else-if="x.type === 'text'">
                 <div class="prefix">{{ prefix }}</div>
                 <div class="name">{{ x.name }}</div>
                 <div v-if="suffix" class="suffix">{{ suffix }}</div>
+              </template>
+              <template v-else-if="x.type === 'centerText'">
+                <div class="con" :class="{ [x.background]: x.background }">
+                  <div v-if="x.subtitle" class="subtitle">{{ x.subtitle }}</div>
+                  <div v-if="x.title" class="title">{{ x.title }}</div>
+                </div>
               </template>
             </div>
           </swiper-slide>
@@ -42,10 +48,6 @@ export default {
       type: String,
       default: null,
     },
-    cardStyle: {
-      type: String,
-      default: 'image',
-    },
     name: {
       type: String,
       default: '',
@@ -56,30 +58,37 @@ export default {
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
         {
           name: `פיג׳ו`,
           image: 'https://img.auto-che.com/logo/qlm/peugeot.png',
+          type: 'image',
         },
       ],
     },
@@ -140,10 +149,27 @@ p {
     }
   }
 
+  .centerText {
+    .con {
+      @apply px-5 h-full flex mx-auto flex-col items-center justify-center;
+      @apply h-[200px];
+      @apply rounded-xl;
+      @apply opacity-100;
+      @apply text-white;
+      .subtitle {
+        @apply text-6xl font-bold;
+      }
+      .title {
+        @apply text-8xl leading-[50px] font-bold;
+      }
+    }
+  }
+
   .text {
     @apply px-5 h-full flex mx-auto flex-col items-center justify-center;
-    height: 197px;
-    border-radius: 10px;
+    @apply h-[200px];
+    @apply rounded-xl;
+    @apply opacity-100;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08);
     background: linear-gradient(
       48deg,

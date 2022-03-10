@@ -14,6 +14,7 @@ export default {
     { src: '~/plugins/click-outside', ssr: false },
     { src: '~/plugins/filters.js' },
     { src: '~/plugins/swiper.js', ssr: false },
+    { src: "~/plugins/google-maps", ssr: true }
   ],
   // 
   css: [],
@@ -39,7 +40,15 @@ export default {
   // 
   eslint: { cache: false, },
   // 
+  publicRuntimeConfig: {
+    google: {
+      map: {
+        key: process.env.GOOGLE_MAP_KEY || null
+      }
+    }
+  },
+  // 
   build: {
-
+    transpile: [/^vue2-google-maps($|\/)/]
   },
 }

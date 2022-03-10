@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body {
+    font-size: 14px;
+
+    @screen lg {
+      font-size: 16px;
+    }
+  }
+
   @font-face {
     font-family: Ogen;
     src: url('@/assets/fonts/Ogen.ttf');
@@ -40,6 +49,14 @@
 
     &:hover {
       @apply bg-orange-gradient-reverse;
+    }
+  }
+
+  .main-title {
+    @apply font-bold text-6xl py-10;
+
+    span {
+      @apply border-b-4 border-trade-orange-1;
     }
   }
 }

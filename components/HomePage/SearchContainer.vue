@@ -10,8 +10,8 @@
       :data="byPrice"
       prefix="עד"
       suffix="ש״ח"
-      card-style="text"
     />
+    <HomePageSearchSlider name="עזבו, לפי קטגוריה" :data="byCategory" />
   </div>
 </template>
 
@@ -20,14 +20,22 @@ export default {
   name: 'SearchContainerComponent',
   data: () => ({
     byPrice: [
-      { name: '40,000' },
-      { name: '60,000' },
-      { name: '80,000' },
-      { name: '100,000' },
-      { name: '120,000' },
-      { name: '140,000' },
-      { name: '180,000' },
-      { name: '200,000' },
+      { type: 'text', name: '40,000' },
+      { type: 'text', name: '60,000' },
+      { type: 'text', name: '80,000' },
+      { type: 'text', name: '100,000' },
+      { type: 'text', name: '120,000' },
+      { type: 'text', name: '140,000' },
+      { type: 'text', name: '180,000' },
+      { type: 'text', name: '200,000' },
+    ],
+    byCategory: [
+      {
+        type: 'centerText',
+        subtitle: 'המבצעים',
+        title: 'החמים',
+        background: 'bg-trade-orange-2',
+      },
     ],
   }),
 }
