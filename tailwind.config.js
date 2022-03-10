@@ -27,7 +27,8 @@ module.exports = {
           silver: {
             1: '#333',
             2: '#707070',
-            3: '#f8f8f8'
+            3: '#f8f8f8',
+            4: '#b4b2b2'
           },
           blue: {
             dark: '#1a3142',

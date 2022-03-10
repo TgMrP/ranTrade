@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  trademobile_mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456789
+      MONGO_INITDB_DATABASE: trade_mobile
+    ports:
+      - 27017:27017
+    volumes:
+      - trademobile_mongodb_data_container:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+volumes:
+  trademobile_mongodb_data_container:

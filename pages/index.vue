@@ -1,6 +1,8 @@
 <template>
   <div class="">
     <HomePageBanner />
+    <HomePageSearchContainer />
+
     <div class="h-96 bg-red-100"></div>
     <div class="h-96 bg-red-200"></div>
     <div class="h-96 bg-red-300"></div>
@@ -25,3 +27,5 @@ export default {
   // },
 }
 </script>
+
+<style lang="scss" scoped></style>
