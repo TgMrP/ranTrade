@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <div class="search">
       <input type="search" placeholder="חיפוש לפי מותג רכב, דגם או שנתון" />
       <IconsSearch />
