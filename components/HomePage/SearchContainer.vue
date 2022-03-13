@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <div class="search">
-      <input type="search" placeholder="חיפוש לפי מותג רכב, דגם או שנתון" />
-      <IconsSearch />
+  <div class="px-4 lg:px-0">
+    <div class="py-10 lg:pr-[190px]">
+      <div class="search">
+        <input type="search" placeholder="חיפוש לפי מותג רכב, דגם או שנתון" />
+        <IconsSearch />
+      </div>
     </div>
+
     <HomePageSearchSlider name="חיפוש לפי מותג" />
     <HomePageSearchSlider
       name="או לפי תקציב"
@@ -12,6 +15,11 @@
       suffix="ש״ח"
     />
     <HomePageSearchSlider name="עזבו, לפי קטגוריה" :data="byCategory" />
+    <div class="flex pt-4 pb-10 justify-center lg:justify-start lg:pr-[190px]">
+      <nuxt-link :to="{ name: 'cars' }">
+        <button type="button" class="s-btn text-xl">צפיה בכל הרכבים</button>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

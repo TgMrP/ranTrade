@@ -1,12 +1,18 @@
 <template>
   <ul>
-    <li>אודות</li>
-    <li>סניפים</li>
+    <li>
+      <nuxt-link :to="{ name: 'about' }">אודות</nuxt-link>
+    </li>
+    <li>
+      <nuxt-link :to="{ name: 'branches' }">סניפים</nuxt-link>
+    </li>
     <li>החבילה המושלמת</li>
     <li>טרייד אין</li>
     <li>תיאום פגישה</li>
     <li>שירות לקוחות</li>
-    <li>שאלות ותשובות</li>
+    <li>
+      <nuxt-link :to="{ name: 'qa' }">שאלות ותשובות</nuxt-link>
+    </li>
   </ul>
 </template>
 

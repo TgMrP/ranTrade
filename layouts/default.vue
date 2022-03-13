@@ -2,6 +2,7 @@
   <div>
     <HeaderMain />
     <Nuxt />
+    <FooterDown />
   </div>
 </template>
 

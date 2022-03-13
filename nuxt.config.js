@@ -23,10 +23,43 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
+    'nuxt-gsap-module'
   ],
   // 
   modules: ['@nuxtjs/axios', '@nuxtjs/auth-next'],
   // 
+  gsap: {
+    /* Module Options */
+  },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    beforeEnter(el) {
+      this.$gsap.set(el, {
+        opacity: 0
+      })
+    },
+
+    enter(el, done) {
+      this.$gsap.to(el, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    },
+
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    }
+  },
   ...modulesConfig,
   // 
   tailwindcss: {

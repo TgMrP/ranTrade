@@ -53,7 +53,7 @@
   }
 
   .main-title {
-    @apply font-bold text-6xl py-10;
+    @apply font-bold text-6xl py-10 text-center lg:text-right;
 
     span {
       @apply border-b-4 border-trade-orange-1;
