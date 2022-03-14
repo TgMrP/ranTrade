@@ -1,6 +1,9 @@
 <template>
   <div>
-    <header id="header" :class="{ active: active }">
+    <header
+      id="header"
+      :class="{ '!text-trade-blue-dark': notHomePageBanner, active: active }"
+    >
       <IconsLogo />
       <!-- MobileMenu -->
       <div
@@ -8,16 +11,8 @@
         v-click-outside="() => (isOpen = false)"
         class="flex-1 w-full flex justify-end lg:hidden"
       >
-        <div class="flex items-center">
-          <div
-            class="hamburger z-[9998]"
-            :class="isOpen ? ' text-trade-blue-dark hamburger--is-open' : ''"
-            @click="isOpen = !isOpen"
-          >
-            <div class="hamburger__item hamburger__item--first"></div>
-            <div class="hamburger__item hamburger__item--middle"></div>
-            <div class="hamburger__item hamburger__item--last"></div>
-          </div>
+        <div class="flex items-center z-[9998]">
+          <HeaderHamburger :open="isOpen" @click.native="isOpen = !isOpen" />
         </div>
 
         <transition name="slide">
@@ -54,10 +49,12 @@
 export default {
   name: 'HeaderMain',
   data: () => ({
+    notHomePageBanner: false,
     active: false,
     isOpen: false,
     isMobile: false,
   }),
+
   mounted() {
     const el = window
     if (el.addEventListener) {
@@ -70,13 +67,27 @@ export default {
     this.scrollEvent()
     this.detectMob()
   },
+  beforeDestroy() {
+    const el = window
+    if (el.addEventListener) {
+      el.removeEventListener('scroll', this.scrollEvent, false)
+      el.removeEventListener('resize', this.detectMob, false)
+    } else if (el.detachEvent) {
+      el.detachEvent('onscroll', this.scrollEvent)
+      el.detachEvent('resize', this.detectMob)
+    }
+  },
   methods: {
     detectMob() {
       this.isMobile = window.innerWidth < 1024
     },
     scrollEvent() {
       const HomePageBanner = document.getElementById('HomePageBanner')
-      if (document.getElementById('HomePageBanner')) {
+      if (!HomePageBanner) {
+        this.notHomePageBanner = true
+      }
+      if (HomePageBanner) {
+        this.notHomePageBanner = false
         const where =
           HomePageBanner.getBoundingClientRect().bottom -
           document.getElementById('header').clientHeight
@@ -111,36 +122,6 @@ export default {
 
     div:first-child {
       @apply flex justify-between items-center w-full;
-    }
-  }
-}
-
-.hamburger {
-  @apply w-9 h-9;
-  @apply flex flex-col justify-between gap-1;
-  &:hover {
-    cursor: pointer;
-  }
-  &__item {
-    @apply bg-current;
-    height: 16px;
-    width: 100%;
-    transition: transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95),
-      opacity 300ms linear;
-    &--first {
-      .hamburger--is-open & {
-        @apply translate-y-3 rotate-45;
-      }
-    }
-    &--middle {
-      .hamburger--is-open & {
-        opacity: 0;
-      }
-    }
-    &--last {
-      .hamburger--is-open & {
-        @apply -translate-y-4 -rotate-45;
-      }
     }
   }
 }

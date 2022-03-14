@@ -9,6 +9,7 @@
 const countFullstops = (str) => str.replace(/[^.]/g, '').length
 
 function elementInViewport(el) {
+  if (!el) return
   let top = el.offsetTop
   let left = el.offsetLeft
   const width = el.offsetWidth
