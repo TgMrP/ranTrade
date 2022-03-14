@@ -99,7 +99,7 @@ export default {
     infoWinOpen: false,
     currentMidx: null,
     //
-    center: { lat: 45, lng: 46 },
+    center: { lat: 32.109333, lng: 34.855499 },
     zoom: 12,
     markers: [
       {
