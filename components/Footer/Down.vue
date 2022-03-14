@@ -31,7 +31,9 @@
       </div>
     </div>
 
-    <div class="flex justify-between items-center container mx-auto px-8 pb-4">
+    <div
+      class="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between items-center container mx-auto px-8 pb-4"
+    >
       <div class="">
         <div class="mx-auto flex gap-4 items-center" style="max-width: 455px">
           <div class="instagram">
@@ -162,16 +164,17 @@ export default {
     @apply py-16;
     @apply container mx-auto;
     @apply flex justify-center;
-    @apply divide-x-2 divide-white divide-opacity-20 divide-x-reverse;
-
+    @apply flex-col lg:flex-row;
+    @apply lg:divide-x-2 divide-white divide-opacity-20 divide-x-reverse;
+    @apply gap-10 lg:gap-0;
     div {
-      @apply w-1/2 px-8;
+      @apply lg:w-1/2 px-8;
     }
   }
 
   .menu {
     ul {
-      @apply flex items-center flex-wrap justify-center gap-4 border-b pb-6 border-opacity-50;
+      @apply flex items-center flex-wrap justify-center gap-4 lg:border-b pb-6 border-opacity-50;
       @apply lg:flex-col lg:items-start lg:flex-nowrap lg:justify-start;
       @apply lg:border-b-0 lg:pb-0;
       @apply text-sm lg:text-base;

@@ -20,7 +20,7 @@ export default {
   css: [],
   // 
   buildModules: [
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
     'nuxt-gsap-module'

@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="bg-orange-gradient-2">
-      <div class="py-20"></div>
+      <div class="py-10 lg:py-20"></div>
     </div>
-    <div class="container mx-auto grid grid-cols-2 gap-20">
+    <div class="container mx-auto grid lg:grid-cols-2 gap-20 px-4 lg:px-0">
       <div class="">
         <h1><span>אודות</span></h1>
         <div class="pt-10">
@@ -33,8 +33,8 @@
         <img
           src="/images/about/about.webp"
           srcset="
-            /images/about/about.webp@2x.webp 2x,
-            /images/about/about.webp@3x.webp 3x
+            /images/about/about@2x.webp 2x,
+            /images/about/about@3x.webp 3x
           "
           alt="b"
         />
@@ -57,6 +57,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
   @apply text-6xl font-bold;
+  @apply text-center lg:text-right;
   @apply text-trade-blue-dark;
   span {
     @apply border-b-2 border-trade-orange-1;

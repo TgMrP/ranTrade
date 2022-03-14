@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto max-w-6xl pt-4">
+  <div class="container mx-auto max-w-6xl pt-4 px-4 lg:px-0">
     <h1>
       <span>שרות הלקוחות של טרייד מוביל</span>
     </h1>
 
     <div
-      class="border border-trade-silver-2 border-opacity-60 grid grid-cols-2 my-12"
+      class="border border-trade-silver-2 border-opacity-60 grid lg:grid-cols-2 my-12"
     >
       <div class="bg-trade-silver-3 h-full flex flex-col justify-between">
         <div class="py-8 w-3/4 mx-auto text-trade-silver-2">
@@ -18,10 +18,10 @@
             <div class="">אימייל info@trademobile.co.il</div>
           </div>
         </div>
-        <div class="text-left">
+        <div class="text-left px-4 lg:px-0">
           <img
             src="@/assets/images/footer/group-7774.svg"
-            class="h-[225px] float-left"
+            class="h-[165px] lg:h-[225px] float-left"
             alt=""
           />
         </div>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="bg-orange-gradient-2 pt-40">
-      <div class="container mx-auto">
+    <div class="bg-orange-gradient-2 pt-20 lg:pt-40">
+      <div class="container mx-auto px-4 lg:px-0">
         <h1>
           החבילה המושלמת <br />
           של טרייד מוביל
         </h1>
       </div>
     </div>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 lg:px-0">
       <h4>לצאת עם הרבה יותר מרכב</h4>
       <div
         v-for="(block, i) in blocks"
@@ -75,20 +75,22 @@ export default {
 <style lang="scss" scoped>
 h1 {
   @apply text-6xl font-bold;
+  @apply text-center lg:text-right;
   @apply text-trade-blue-dark;
 }
 
 h4 {
   @apply font-light;
   @apply text-5xl;
+  @apply text-center lg:text-right;
   @apply text-trade-silver-2;
 }
 
 .content-flex {
-  @apply flex justify-between gap-20 py-20;
+  @apply flex flex-col lg:flex-row justify-between gap-20 py-20;
 
   .text {
-    @apply w-4/12;
+    @apply lg:w-4/12;
     .title {
       @apply flex gap-8;
       h3 {

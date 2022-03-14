@@ -138,8 +138,8 @@ export default {
 <style lang="scss" scoped>
 p {
   @apply text-5xl text-trade-blue-dark;
-  @apply text-center lg:text-right;
-  @apply w-[160px];
+  /* @apply text-center lg:text-right; */
+  @apply lg:w-[160px];
 }
 
 .swiper-slide {
