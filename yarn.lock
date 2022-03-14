@@ -1210,11 +1210,11 @@
     ufo "^0.7.4"
 
 "@nuxt/kit@npm:@nuxt/kit-edge@latest":
-  version "3.0.0-27451165.114cbe3"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27451165.114cbe3.tgz#f20909c2adf114cce7c2244f023661c83ef2daab"
-  integrity sha512-bhm3TbgJZR0wfDE8SIajYkYJA61lwqUb7kNHNmtuuZ2qAab4HBHAcMY83cKb5kEPLYSRIKhTddMerNfW8s2t6g==
+  version "3.0.0-27453291.e891ea0"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27453291.e891ea0.tgz#d214e6f9d7a90ea5a11726bc16698f72aac307c3"
+  integrity sha512-kZBwSAt+Cr7rwgxpsDZp5hE4gALI+cqxDAWuITljB8NpjgX7m033luXwS04SzkkUe0z/L4qp4m3jW+xEtR25GQ==
   dependencies:
-    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27451165.114cbe3"
+    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27453291.e891ea0"
     c12 "^0.1.4"
     consola "^2.15.3"
     defu "^5.0.1"
@@ -1267,10 +1267,10 @@
     postcss-url "^10.1.1"
     semver "^7.3.4"
 
-"@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-27451165.114cbe3":
-  version "3.0.0-27451165.114cbe3"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema-edge/-/schema-edge-3.0.0-27451165.114cbe3.tgz#5acb8cec74c6dd7f93c8b46c7e6db0f582a16713"
-  integrity sha512-qHnR0CpgHhj31MTiMZa3SZwmjp6bdv/Y0ggLwAjYXX9gCheePrPfYlJuz0tLHY4A2wsIbMlYOBFFikTsAWY/Mw==
+"@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-27453291.e891ea0":
+  version "3.0.0-27453291.e891ea0"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema-edge/-/schema-edge-3.0.0-27453291.e891ea0.tgz#33a1c53da66c031d626d687ca3af1592d0999c7d"
+  integrity sha512-Vv9I4dd1SQo/CSj/5nWLDvRsO+k+PN+JoNfm0uG/tkCGAEZfv9sk3W3MlyZV+KEHsXTuBoLS/3pNcM5A4xRHPA==
   dependencies:
     c12 "^0.1.4"
     create-require "^1.1.1"
@@ -9822,9 +9822,9 @@ ts-pnp@^1.1.6:
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
 tsconfig-paths@^3.12.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.13.0.tgz#f3e9b8f6876698581d94470c03c95b3a48c0e3d7"
-  integrity sha512-nWuffZppoaYK0vQ1SQmkSsQzJoHA4s6uzdb2waRpD806x9yfq153AdVsWz4je2qZcW+pENrMQXbGQ3sMCkXuhw==
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.14.0.tgz#4fcc48f9ccea8826c41b9ca093479de7f5018976"
+  integrity sha512-cg/1jAZoL57R39+wiw4u/SCC6Ic9Q5NqjBOb+9xISedOYurfog9ZNmKJSxAnb2m/5Bq4lE9lhUcau33Ml8DM0g==
   dependencies:
     "@types/json5" "^0.0.29"
     json5 "^1.0.1"
