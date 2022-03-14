@@ -165,7 +165,11 @@ export default {
     @apply container mx-auto;
     @apply flex justify-center;
     @apply flex-col lg:flex-row;
-    @apply lg:divide-x-2 divide-white divide-opacity-20 divide-x-reverse;
+
+    @screen lg {
+      @apply divide-x-2 divide-white divide-opacity-20 divide-x-reverse;
+    }
+
     @apply gap-10 lg:gap-0;
     div {
       @apply lg:w-1/2 px-8;
