@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .main {
+  @apply w-full flex justify-end;
   .button {
     @apply flex items-center gap-2;
     p {

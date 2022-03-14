@@ -11,7 +11,7 @@
         <div class="flex items-center">
           <div
             class="hamburger z-[9998]"
-            :class="isOpen ? 'hamburger--is-open' : ''"
+            :class="isOpen ? ' text-trade-blue-dark hamburger--is-open' : ''"
             @click="isOpen = !isOpen"
           >
             <div class="hamburger__item hamburger__item--first"></div>
@@ -60,9 +60,13 @@ export default {
   }),
   mounted() {
     const el = window
-    if (el.addEventListener)
+    if (el.addEventListener) {
       el.addEventListener('scroll', this.scrollEvent, false)
-    else if (el.attachEvent) el.attachEvent('onscroll', this.scrollEvent)
+      el.addEventListener('resize', this.detectMob, false)
+    } else if (el.attachEvent) {
+      el.attachEvent('onscroll', this.scrollEvent)
+      el.attachEvent('resize', this.detectMob)
+    }
     this.scrollEvent()
     this.detectMob()
   },
@@ -118,7 +122,7 @@ export default {
     cursor: pointer;
   }
   &__item {
-    @apply bg-trade-blue-dark;
+    @apply bg-current;
     height: 16px;
     width: 100%;
     transition: transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95),
