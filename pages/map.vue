@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto base-padding">
+  <div class="container mx-auto">
     <div class="main-title">
       <span>הסניפים שלנו </span>
     </div>

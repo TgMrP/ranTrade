@@ -1,5 +1,5 @@
 <template>
-  <div class="base-padding container mx-auto">
+  <div class="container mx-auto">
     <div class="text-center py-4">
       <span class="title"> שאלות תשובות </span>
       <!--  -->
