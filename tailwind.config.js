@@ -15,7 +15,8 @@ module.exports = {
       backgroundImage: {
         'orange-gradient': "linear-gradient(225deg, #ffb700, #ffe096)",
         'orange-gradient-reverse': "linear-gradient(128deg, #ffb700, #ffe096)",
-        'silver-gradient': "linear-gradient(48deg, rgba(255, 255, 255, 0.74) 24%, rgba(213, 213, 213, 1))"
+        'silver-gradient': "linear-gradient(48deg, rgba(255, 255, 255, 0.74) 24%, rgba(213, 213, 213, 1))",
+        'orange-gradient-2': "linear-gradient(0deg,rgba(255, 255, 255, 1) 0%,rgba(255, 224, 150, 1) 100%)"
       },
       colors: {
         trade: {

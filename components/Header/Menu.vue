@@ -6,7 +6,9 @@
     <li>
       <nuxt-link :to="{ name: 'branches' }">סניפים</nuxt-link>
     </li>
-    <li>החבילה המושלמת</li>
+    <li>
+      <nuxt-link :to="{ name: 'best-package' }">החבילה המושלמת</nuxt-link>
+    </li>
     <li>טרייד אין</li>
     <li>תיאום פגישה</li>
     <li>שירות לקוחות</li>

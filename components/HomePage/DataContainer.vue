@@ -79,13 +79,8 @@ export default {
 <style lang="scss" scoped>
 .dataContainer {
   @apply py-12;
+  @apply bg-orange-gradient-2;
 
-  background: rgb(255, 224, 150);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 224, 150, 1) 100%
-  );
   .numbers {
     @apply text-center;
 

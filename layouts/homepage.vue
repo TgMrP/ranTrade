@@ -1,16 +1,14 @@
 <template>
   <div>
     <HeaderMain />
-    <main class="base-margin">
-      <Nuxt />
-    </main>
+    <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DefaultLayout',
+  name: 'HomePageLayout',
 }
 </script>
 
