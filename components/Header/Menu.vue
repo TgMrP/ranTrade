@@ -11,7 +11,9 @@
     </li>
     <li>טרייד אין</li>
     <li>תיאום פגישה</li>
-    <li>שירות לקוחות</li>
+    <li>
+      <nuxt-link :to="{ name: 'contact' }">שירות לקוחות</nuxt-link>
+    </li>
     <li>
       <nuxt-link :to="{ name: 'qa' }">שאלות ותשובות</nuxt-link>
     </li>
