@@ -1,6 +1,9 @@
 <template>
   <div class="relative pb-16 lg:pb-40">
-    <div class="title">
+    <div v-if="title" class="title">
+      <h2>{{ title }}</h2>
+    </div>
+    <div v-else class="title">
       <h2>סידרנו לכם את החבילה המושלמת</h2>
       <h2>לקניה ומכירה של רכבים</h2>
     </div>
@@ -84,6 +87,7 @@
       </div>
     </div>
     <img
+      v-if="showBottom"
       src="@/assets/images/homepage/silver-line.png"
       alt=""
       class="absolute bottom-0"
@@ -94,6 +98,16 @@
 <script>
 export default {
   name: 'HomepageBestPackageContainer',
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    showBottom: {
+      type: Boolean,
+      default: true,
+    },
+  },
 }
 </script>
 
