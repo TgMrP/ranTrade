@@ -112,6 +112,18 @@ export default {
           freeMode: true,
         },
         1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          watchSlidesVisibility: true,
+          freeMode: false,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          watchSlidesVisibility: true,
+          freeMode: false,
+        },
+        1536: {
           slidesPerView: 4,
           spaceBetween: 30,
           watchSlidesVisibility: true,
