@@ -1,6 +1,6 @@
 <template>
   <div class="box" :class="{ mini: mini }">
-    <img src="https://trademobile.tk/_nuxt/img/empty-car.c8c7dc4.png" alt="" />
+    <img v-if="car.Picture" :src="car.Picture" alt="" />
     <div class="line mx-auto" />
     <div class="name">
       <div>{{ car.Mnfctr }}</div>
@@ -19,15 +19,15 @@
     </div>
 
     <div class="typeCards">
-      <div class="" :class="{ 'opacity-50': car.Hand > 1 }">
+      <div class="" :class="{ 'opacity-50': !car.FirstHand }">
         <IconsCarFirstHand class="h-5" />
         יד ראשונה
       </div>
-      <div class="" :class="{ 'opacity-50': car.Hand > 1 }">
+      <div class="" :class="{ 'opacity-50': !car.PrivetOwner }">
         <IconsCarPrivetOwner class="h-5" />
         בעלות פרטית
       </div>
-      <div class="" :class="{ 'opacity-50': car.Hand > 1 }">
+      <div class="" :class="{ 'opacity-50': !car.LowKM }">
         <IconsCarKM class="h-5" />
         קילומטראז נמוך
       </div>

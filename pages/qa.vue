@@ -48,6 +48,9 @@
 <script>
 export default {
   name: 'QApage',
+  // async asyncData({$axios}) {
+  //   const { data: { faq}}
+  // },
   data() {
     const categories = []
     for (let i = 0; i < 5; i++) {

@@ -3,6 +3,6 @@ import axios from './axios'
 
 export default {
   head,
-  axios,
+  ...axios,
 
 }

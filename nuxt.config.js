@@ -23,7 +23,8 @@ export default {
     // '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    'nuxt-gsap-module'
+    'nuxt-gsap-module',
+    '@nuxtjs/composition-api/module'
   ],
   // 
   modules: ['@nuxtjs/axios', '@nuxtjs/auth-next'],
@@ -66,10 +67,10 @@ export default {
     cssPath: '~/assets/styles/tailwind.scss',
     configPath: '~/tailwind.config.js',
   },
-  // 
-  serverMiddleware: [
-    { path: "/api", handler: "~/server/index.js" },
-  ],
+  // // 
+  // serverMiddleware: [
+  //   { path: "/api", handler: "~/server/index.js" },
+  // ],
   // 
   eslint: { cache: false, },
   // 
