@@ -25,7 +25,7 @@
     "lodash": "4.17.21",
     "nuxt": "2.15.8",
     "nuxt-gsap-module": "^1.6.0",
-    "swiper": "^8.0.7",
+    "swiper": "^9.0.0",
     "v-click-outside": "^3.1.2",
     "vue": "2.6.14",
     "vue-awesome-swiper": "^4.1.1",
