@@ -17,7 +17,7 @@
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/composition-api": "^0.32.0",
     "@vueform/slider": "^2.0.9",
-    "bcrypt": "5.0.1",
+    "bcrypt": "6.0.0",
     "core-js": "3.21.1",
     "crypto": "1.0.1",
     "dotenv": "^16.0.0",
